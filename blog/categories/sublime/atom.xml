@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sublime | Oisris@五月病]]></title>
+  <link href="http://Oisris.github.io/blog/categories/sublime/atom.xml" rel="self"/>
+  <link href="http://Oisris.github.io/"/>
+  <updated>2013-05-18T16:00:58+08:00</updated>
+  <id>http://Oisris.github.io/</id>
+  <author>
+    <name><![CDATA[Oisris]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime text，又一个编辑利器]]></title>
+    <link href="http://Oisris.github.io/blog/2013/05/13/sublime-text/"/>
+    <updated>2013-05-13T15:57:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2013/05/13/sublime-text</id>
+    <content type="html"><![CDATA[<p><a href="http://www.sublimetext.com/">Sublime</a>是个跨平台文本编辑器，有丰富的插件支持，在Linux和windows下都有很好的表现。界面很好看，尤其右边的缩略图在看打文件时实在美爆了>_&lt;。而且Sublime在使用<a href="https://code.google.com/p/zen-coding/">zencode</a>的时候能看实时效果。看过<a href="http://lucifr.com/">Lucifr</a>大大的一些介绍之后更是觉得碉堡。</p>
+
+<p><img src="http://i.imgur.com/138orcg.png" alt="" /></p>
+
+<p>可以在官网<a href="http://www.sublimetext.com/2">下载</a>，直接解压可用。</p>
+
+<p>也可以添加ppa源安装</p>
+
+<pre><code>sudo add-apt-repository ppa:webupd8team/sublime-text-2
+sudo apt-get update
+sudo apt-get install sublime-text
+</code></pre>
+
+<p>安装Package Control，<code>ctrl+`</code>打开控制台，输入</p>
+
+<pre><code>import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+</code></pre>
+
+<p>然后可以通过Package Control方便地安装插件了。
+更多有趣的使用方法可以参考<a href="https://www.google.com/search?q=sublime&amp;q=site%3Alucifr.com">Lucifr的博文</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
