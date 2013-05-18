@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: desktop配置 | Oisris@五月病]]></title>
+  <link href="http://Oisris.github.io/blog/categories/desktoppei-zhi/atom.xml" rel="self"/>
+  <link href="http://Oisris.github.io/"/>
+  <updated>2013-05-18T15:38:43+08:00</updated>
+  <id>http://Oisris.github.io/</id>
+  <author>
+    <name><![CDATA[Oisris]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[剖析.desktop文件]]></title>
+    <link href="http://Oisris.github.io/blog/2012/12/14/pou-xi-dot-desktopwen-jian/"/>
+    <updated>2012-12-14T19:33:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2012/12/14/pou-xi-dot-desktopwen-jian</id>
+    <content type="html"><![CDATA[<p>.desktop文件由<a href="http://www.Freedesktop.org">Freedesktop.org</a>维护，在Gnome，KDE，LXDE，XFCE这些X环境中通用。</p>
+
+<p>.desktop文件有两个主要功能，一个是让程序显示在菜单里面，这需要把.desktop文件放在<code>/usr/share/applications/</code>里面，有些特殊情况会放在<code>$HOME/.local/applications/</code>里面，另一个功能是让程序显示在桌面，需要把.desktop文件放在<code>$HOME/Desktop</code>里面。</p>
+
+<p>.desktop文件的内容按照一个key对应一个value的格式书写：<code>key=value</code></p>
+
+<!--more-->
+
+
+<h3>必要元素</h3>
+
+<p>Type &ndash; 定义条目的类型，有<code>Application</code>，<code>Link</code>和<code>Directory</code>三种。<br />
+Name &ndash; 定义在菜单或者桌面中显示的名字<br />
+Exec &ndash; 提供执行命令和相关参数<br /></p>
+
+<h3>可选元素</h3>
+
+<p>Version &ndash; 版本信息<br />
+Encoding &ndash; .desktop文件的编码<br />
+GenericName &ndash; 定义通用名字（有什么用我也不知道_(:3」∠)_）<br />
+Nodisplay &ndash; 布尔参数，值为<code>true</code>的时候图标不在菜单显示，系统认为程序存在<br />
+Comment &ndash; 可以在这里增加一些说明<br />
+Icon &ndash; 指图标<br />
+Hidden &ndash; 布尔参数，值为<code>true</code>的时候图标不在菜单显示，系统认为程序不存在<br />
+OnlyShowIn &ndash; 如果使用多桌面环境（例如同时使用Gnome和LXDE），就可以指定在那个桌面环境显示<br />
+NotShowIn &ndash; 跟OnlyShowIn相反<br />
+Path &ndash; 指定默认的工作目录<br />
+Terminal &ndash; 布尔参数，指定是否需要在终端上运行<br />
+Categories &ndash; 指定程序属于的类别，详细查看<a href="http://standards.freedesktop.org/menu-spec/latest/apa.html">类别标准</a>。</p>
+
+<p>可以使用"#&ldquo;号进行注释</p>
+
+<h3>例子</h3>
+
+<p>创建一个文件<code>filename.desktop</code></p>
+
+<p><code>objc filename.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec=$HOME/MyApp
+Name=Application Name
+Icon=$HOME/Icons/MyIcon.png
+</code></p>
+
+<p>以上&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

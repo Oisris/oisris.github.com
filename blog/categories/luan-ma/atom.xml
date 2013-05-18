@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 乱码 | Oisris@五月病]]></title>
+  <link href="http://Oisris.github.io/blog/categories/luan-ma/atom.xml" rel="self"/>
+  <link href="http://Oisris.github.io/"/>
+  <updated>2013-05-18T15:38:43+08:00</updated>
+  <id>http://Oisris.github.io/</id>
+  <author>
+    <name><![CDATA[Oisris]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[解决Ubuntu下解压rar，zip文件乱码]]></title>
+    <link href="http://Oisris.github.io/blog/2012/12/11/jie-jue-ubuntuxia-jie-ya-rar%2Czipwen-jian-luan-ma/"/>
+    <updated>2012-12-11T22:28:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2012/12/11/jie-jue-ubuntuxia-jie-ya-rar,zipwen-jian-luan-ma</id>
+    <content type="html"><![CDATA[<p>Ubuntu下解压rar文件出现乱码是因为Ubuntu的unrar是不支持中文编码的，安装Linux版7zip能解决问题。</p>
+
+<pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar
+</code></pre>
+
+<p>卸载安装过的rar相关包(如果有安装的话，默认是没有安装的)</p>
+
+<pre><code>sudo apt-get remove rar unrar
+</code></pre>
+
+<p>之后，解压rar文件时，归档管理器就会自动调用7z来解压。</p>
+
+<!--more-->
+
+
+<p>zip文件解压乱码可以参考以上方法卸载unzip让归档管理器选择7z来处理zip文件，也可以使用unzip的<code>-O CHARSET</code>选项来指定文件的编码</p>
+
+<pre><code>unzip -O GBK filename
+</code></pre>
+
+<p>_(:3」∠)_以上。</p>
+]]></content>
+  </entry>
+  
+</feed>

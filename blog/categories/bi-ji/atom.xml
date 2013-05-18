@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 笔记 | Oisris@五月病]]></title>
+  <link href="http://Oisris.github.io/blog/categories/bi-ji/atom.xml" rel="self"/>
+  <link href="http://Oisris.github.io/"/>
+  <updated>2013-05-18T15:38:43+08:00</updated>
+  <id>http://Oisris.github.io/</id>
+  <author>
+    <name><![CDATA[Oisris]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Unbuntu下安装firefox的flash插件]]></title>
+    <link href="http://Oisris.github.io/blog/2012/12/11/unbuntuxia-an-zhuang-firefoxde-flashcha-jian/"/>
+    <updated>2012-12-11T23:17:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2012/12/11/unbuntuxia-an-zhuang-firefoxde-flashcha-jian</id>
+    <content type="html"><![CDATA[<p>firefox的flash插件总是很奇葩地自动安装失败，于是从Adobe下载flash插件，解压</p>
+
+<pre><code>sudo cp -r usr/* /usr
+sudo cp libflashplayer.so /usr/lib/mozilla/plugins
+</code></pre>
+
+<p>_(:3」∠)_以上，纯粹笔记记下firefox的插件路径。</p>
+]]></content>
+  </entry>
+  
+</feed>

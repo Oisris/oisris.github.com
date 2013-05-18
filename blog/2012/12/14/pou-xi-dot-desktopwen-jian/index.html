@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>剖析.desktop文件 - Oisris@五月病</title>
+  <meta name="author" content="Oisris">
+
+  
+  <meta name="description" content=".desktop文件由Freedesktop.org维护，在Gnome，KDE，LXDE，XFCE这些X环境中通用。 .desktop文件有两个主要功能，一个是让程序显示在菜单里面，这需要把.desktop文件放在/usr/share/applications/里面，有些特殊情况会放在$HOME &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://Oisris.github.io/blog/2012/12/14/pou-xi-dot-desktopwen-jian">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Oisris@五月病" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Oisris@五月病</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:Oisris.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">剖析.desktop文件</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-14T19:33:00+08:00" pubdate data-updated="true">Dec 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>.desktop文件由<a href="http://www.Freedesktop.org">Freedesktop.org</a>维护，在Gnome，KDE，LXDE，XFCE这些X环境中通用。</p>
+
+<p>.desktop文件有两个主要功能，一个是让程序显示在菜单里面，这需要把.desktop文件放在<code>/usr/share/applications/</code>里面，有些特殊情况会放在<code>$HOME/.local/applications/</code>里面，另一个功能是让程序显示在桌面，需要把.desktop文件放在<code>$HOME/Desktop</code>里面。</p>
+
+<p>.desktop文件的内容按照一个key对应一个value的格式书写：<code>key=value</code></p>
+
+<!--more-->
+
+
+<h3>必要元素</h3>
+
+<p>Type &ndash; 定义条目的类型，有<code>Application</code>，<code>Link</code>和<code>Directory</code>三种。<br />
+Name &ndash; 定义在菜单或者桌面中显示的名字<br />
+Exec &ndash; 提供执行命令和相关参数<br /></p>
+
+<h3>可选元素</h3>
+
+<p>Version &ndash; 版本信息<br />
+Encoding &ndash; .desktop文件的编码<br />
+GenericName &ndash; 定义通用名字（有什么用我也不知道_(:3」∠)_）<br />
+Nodisplay &ndash; 布尔参数，值为<code>true</code>的时候图标不在菜单显示，系统认为程序存在<br />
+Comment &ndash; 可以在这里增加一些说明<br />
+Icon &ndash; 指图标<br />
+Hidden &ndash; 布尔参数，值为<code>true</code>的时候图标不在菜单显示，系统认为程序不存在<br />
+OnlyShowIn &ndash; 如果使用多桌面环境（例如同时使用Gnome和LXDE），就可以指定在那个桌面环境显示<br />
+NotShowIn &ndash; 跟OnlyShowIn相反<br />
+Path &ndash; 指定默认的工作目录<br />
+Terminal &ndash; 布尔参数，指定是否需要在终端上运行<br />
+Categories &ndash; 指定程序属于的类别，详细查看<a href="http://standards.freedesktop.org/menu-spec/latest/apa.html">类别标准</a>。</p>
+
+<p>可以使用&#8221;#&ldquo;号进行注释</p>
+
+<h3>例子</h3>
+
+<p>创建一个文件<code>filename.desktop</code></p>
+
+<figure class='code'><figcaption><span>filename.desktop</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
+</span><span class='line'><span class="n">Encoding</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+</span><span class='line'><span class="n">Version</span><span class="o">=</span><span class="mf">1.0</span>
+</span><span class='line'><span class="n">Type</span><span class="o">=</span><span class="n">Application</span>
+</span><span class='line'><span class="n">Terminal</span><span class="o">=</span><span class="n">false</span>
+</span><span class='line'><span class="n">Exec</span><span class="o">=</span><span class="n">$HOME</span><span class="o">/</span><span class="n">MyApp</span>
+</span><span class='line'><span class="n">Name</span><span class="o">=</span><span class="n">Application</span> <span class="n">Name</span>
+</span><span class='line'><span class="n">Icon</span><span class="o">=</span><span class="n">$HOME</span><span class="o">/</span><span class="n">Icons</span><span class="o">/</span><span class="n">MyIcon</span><span class="p">.</span><span class="n">png</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>以上&hellip;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Oisris</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-14T19:33:00+08:00" pubdate data-updated="true">Dec 14<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/desktoppei-zhi/'>desktop配置</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://Oisris.github.io/blog/2012/12/14/pou-xi-dot-desktopwen-jian/" data-via="" data-counturl="http://Oisris.github.io/blog/2012/12/14/pou-xi-dot-desktopwen-jian/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/12/11/unbuntuxia-an-zhuang-firefoxde-flashcha-jian/" title="Previous Post: Unbuntu下安装firefox的flash插件">&laquo; Unbuntu下安装firefox的flash插件</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/12/16/ubunturuan-jian-tui-jian/" title="Next Post: Ubuntu软件推荐">Ubuntu软件推荐 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/16/ubunturuan-jian-tui-jian/">Ubuntu软件推荐</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/14/pou-xi-dot-desktopwen-jian/">剖析.desktop文件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/11/unbuntuxia-an-zhuang-firefoxde-flashcha-jian/">Unbuntu下安装firefox的flash插件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/12/11/jie-jue-ubuntuxia-jie-ya-rar%2Czipwen-jian-luan-ma/">解决Ubuntu下解压rar，zip文件乱码</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Oisris -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
