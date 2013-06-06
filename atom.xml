@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Oisris@五月病]]></title>
+  <title><![CDATA[Oisris@五月病持续中]]></title>
   <link href="http://Oisris.github.io/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-05-26T18:21:18+08:00</updated>
+  <updated>2013-06-06T16:20:53+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[无题1]]></title>
+    <link href="http://Oisris.github.io/blog/2013/06/06/no-title-1/"/>
+    <updated>2013-06-06T10:56:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2013/06/06/no-title-1</id>
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/BD31n7L.png" alt="" /></p>
+
+<p>上班时候上<a href="http://www.v2ex.com/">V2EX</a>划水，偶然看到这：<a href="http://www.v2ex.com/t/69822#;">问攻城师：有没有比较不错的前端开发培训的</a>。</p>
+
+<blockquote><p>在家里断断续续学完了HTML，然后就不能继续下去了，家里天天吵着要我去工作，不要在家这     么玩，我能跟父母说什么？他们一直瞧不起我，哎不说了，求攻城师推荐下，年纪起来越大了，一直在工地，或者工厂上班，没任何谋生技能，现在真心意识到没技能在外面好苦哇！！！！！</p></blockquote>
+
+<p>中了不少枪=。=<br /></p>
+
+<!--more-->
+
+
+<p>然后有不少让人能马上打起精神学习的评论</p>
+
+<p><a href="http://www.v2ex.com/member/chuangbo">chuangbo</a>说的</p>
+
+<blockquote><p>我认识一个很棒很棒的程序员，一个人的效率相当于一个团队，没怎么读书就去工厂打工了，然后其他人不上班的时候去网吧打游戏，他也去网吧，但是他发现游戏不好玩，于是听别人介绍，学了 ASP，从此改变人生。</p>
+
+<p>看你的描述，我觉得你的困扰可能在于「断断续续」「在家这么玩」，时间并没有利用起来，也就是没有真的想清楚。有句古话说的好，不见棺材不掉泪。加油吧。</p></blockquote>
+
+<p><a href="http://www.v2ex.com/member/qiayue">qiayue</a>说的</p>
+
+<blockquote><p>我一个高中同学，正在自学前后端，路径是先学 html css &ndash;> js &ndash;> php
+这是他用于学习记录的博客 <a href="http://www.dawnba.com/">http://www.dawnba.com/</a> （他自己摸索着学习 wordpress 的使用，所以你会发现他导航栏有一个地方设置错了，不过不要紧，过段时间也许他就会发现了）</p>
+
+<p>他之前是富士康的一名 iPad 维修工人，四月份辞职在家自学编程</p>
+
+<p>学习资料来自于网络 w3school codecademy 等</p>
+
+<p>不要带着情绪去学，把你爸妈拉到电脑前，演示给他看，你在做什么，然后一定要有一个地方记录下你每天所学的东西，既是给自己一个梳理每天学到的东西的机会，也给旁人看看，你今天没有浪费时间</p></blockquote>
+
+<p>点进上面提到的blog看下，写的都是些简单的学习笔记而已，但是感觉很实在，觉得以前自己老是想写些碉堡的东西结果到头来就把blog搁置了真是弱爆了。重要的是记录下每天学习到的东西，每天天都能实实在在地学习到一些新东西就够了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[这是个悲伤的故事]]></title>
