@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 总结 | Oisris@五月病持续中...]]></title>
+  <link href="http://Oisris.github.io/blog/categories/zong-jie/atom.xml" rel="self"/>
+  <link href="http://Oisris.github.io/"/>
+  <updated>2013-06-10T00:35:18+08:00</updated>
+  <id>http://Oisris.github.io/</id>
+  <author>
+    <name><![CDATA[Oisris]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NEET第一周总结]]></title>
+    <link href="http://Oisris.github.io/blog/2013/06/09/summary-of-1st-week/"/>
+    <updated>2013-06-09T23:46:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2013/06/09/summary-of-1st-week</id>
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/kvN0Ok1.png" alt="" /></p>
+
+<p>刚离职滚回家开始NEET的生活，电脑就出问题了，自己拆了几次没修好，拿去给隔壁检测，发现主板bios乱了，刷不回来，于是要换主板，顺便把cpu也换了，果断上E3，想换好久了，只是电脑没坏的话一直不舍得，不过现在没收入了倒真坏得不是时候。</p>
+
+<!--more-->
+
+
+<p><img src="http://i.imgur.com/kN7HNxt.jpg" alt="" /></p>
+
+<p>以后再换张显卡应该就可以撸黑苹果了。</p>
+
+<p>第一周弄新电脑花了两天，学了两次车，平时坐在电脑前总是不知干什么好，于是有跑去跟基友玩dota，搞了个oisris.me的域名邮箱，然后突然想玩gal，于是搞wine，结果弄了两天没弄好，老是缺少了一个32位的组件，又懒得重装ia32-libs，真失败，只有夜明前的琉璃色成功了。最后才今天终于打起精神写了点代码。</p>
+
+<p>一周下来Todo list也没划掉几个，反倒天天被母上唠叨，下周一定要高效些了。</p>
+]]></content>
+  </entry>
+  
+</feed>
