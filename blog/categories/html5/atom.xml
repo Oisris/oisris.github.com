@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-09T17:11:58+08:00</updated>
+  <updated>2013-06-09T17:13:50+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -22,25 +22,31 @@
 
 <p>用<code>&lt;header&gt;</code>标注页眉，<code>&lt;footer&gt;</code>标注页脚，<code>&lt;article&gt;</code>表示一个完整的内容快。通常存放博客或者新闻内容。用<code>&lt;hgroup&gt;</code>标注副标题。</p>
 
-<p><div><script src='https://gist.github.com/5548287.js'></script>
-<noscript><pre><code></code></pre></noscript></div>
-</p>
-
-<p>用<code>&lt;figure&gt;</code>元素添加插图，图题放在<code>&lt;figure&gt;</code>中的<code>&lt;figcaption&gt;</code>里面。</p>
-
 <p>```html
-<figure class="floatFigure"></p>
+<article></p>
 
-<pre><code>&lt;img src="http://Oisris.github.io/nyan.jpg"&gt;
-&lt;figcaption&gt;NyanNyanNyanNyanNyanNyan&lt;/figcaption&gt;
+<pre><code>&lt;header class="header"&gt;
+    &lt;hgroup&gt;
+        &lt;h1&gt;How the World Could End&lt;h1&gt;
+        &lt;h2&gt;Scenarios that spell the end of life as we know&lt;/h2&gt;
+    &lt;/hgroup&gt;
+    &lt;p class="Byline"&gt;by Ray N.&lt;/p&gt;
+&lt;/header&gt;
+&lt;div class="content"&gt;
+    &lt;p&gt;&lt;span&gt;Right now&lt;/span&gt;, you're probably...&lt;/p&gt;
+    &lt;p&gt;....&lt;/p&gt;
+    &lt;h2&gt;Mayan Doomsday&lt;/h2&gt;
+    &lt;p&gt;....&lt;/p&gt;
+    ....
+&lt;/div&gt;
+&lt;footer class="footer"&gt;
+    &lt;p class="Disclaimer"&gt;...&lt;/p&gt;
+    ...
+&lt;/footer&gt;
 </code></pre>
 
-<p></figure>
+<p></article>
 ```</p>
-
-<p>用<code>&lt;aside&gt;</code>元素表示与它周围文本没有密切关系的内容。通常用于附注栏，放一些广告或者其他一些相关的话题。</p>
-
-<p>使用<code>&lt;nav&gt;</code>标注导航链接，区块元素<code>&lt;section&gt;</code>定位有些模糊，感觉跟<code>&lt;div&gt;</code>差不多，暂时不管了。</p>
 ]]></content>
   </entry>
   
