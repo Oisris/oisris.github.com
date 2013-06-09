@@ -4,7 +4,7 @@
   <title><![CDATA[Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-09T17:13:50+08:00</updated>
+  <updated>2013-06-09T17:15:10+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -65,7 +65,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>用<code>&lt;figure&gt;</code>元素添加插图，图题放在<code>&lt;figure&gt;</code>中的<code>&lt;figcaption&gt;</code>里面。</p>
 ]]></content>
   </entry>
   
