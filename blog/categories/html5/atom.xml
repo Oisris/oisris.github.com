@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-09T17:15:10+08:00</updated>
+  <updated>2013-06-09T17:15:52+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -49,6 +49,16 @@
 ```</p>
 
 <p>用<code>&lt;figure&gt;</code>元素添加插图，图题放在<code>&lt;figure&gt;</code>中的<code>&lt;figcaption&gt;</code>里面。</p>
+
+<p>```html
+<figure class="floatFigure"></p>
+
+<pre><code>&lt;img src="http://Oisris.github.io/nyan.jpg"&gt;
+&lt;figcaption&gt;NyanNyanNyanNyanNyanNyan&lt;/figcaption&gt;
+</code></pre>
+
+<p></figure>
+```</p>
 ]]></content>
   </entry>
   
