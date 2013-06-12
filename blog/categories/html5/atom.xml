@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-10T00:35:18+08:00</updated>
+  <updated>2013-06-12T16:53:40+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5语义元素2]]></title>
+    <link href="http://Oisris.github.io/blog/2013/06/10/html5-semantic-element-2/"/>
+    <updated>2013-06-10T17:08:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2013/06/10/html5-semantic-element-2</id>
+    <content type="html"><![CDATA[<p>之前记录了一些与页面结构有关的语义元素，<code>article</code>，<code>aside</code>，<code>figure</code>，<code>figcaption</code>，<code>footer</code>，<code>header</code>，<code>hgroup</code>，<code>nav</code>和<code>section</code>。除了这些之外还有一些其他的一些语义元素.</p>
+
+<h3>使用<code>time</code>元素标注时间和日期</h3>
+
+<p>计算机能看懂的日期格式为<code>YYYY-MM-DD</code>。</p>
+
+<p><code>html
+Today is &lt;time datetime="2013-06-04"&gt;2013.06.04&lt;/time&gt;
+</code></p>
+
+<p>标注日期的格式为<code>HH:MM+00:00</code>，前两位表示小时，接着两位表示分钟，然后是一个加号，后面的是时区。要表示北京时间晚上七点半的话：</p>
+
+<p><code>html
+The party starts at &lt;time datetime="19:30+8:00"&gt;7:30 pm.&lt;/time&gt;
+</code></p>
+
+<p>也可以吧上面两个合在一起，在日期和时间之间使用T连接。</p>
+
+<p><code>html
+The party starts at &lt;time datetime="2013-06-04T19:30+8:00"&gt;June 4&lt;sup&gt;th&lt;/sup&gt; at 7:30 pm.&lt;/time&gt;
+</code></p>
+
+<!--more-->
+
+
+<h3>使用<code>output</code>标注JavaScript返回值</h3>
+
+<p>这个元素更多是用作占位符，用来放JavaScript的输出数据。</p>
+
+<p>```html
+&lt;!DOCTYPE html>
+<html>
+<head></p>
+
+<pre><code>&lt;title&gt;Simple Calculator&lt;/title&gt;
+</code></pre>
+
+<p></head>
+<body></p>
+
+<pre><code>&lt;script&gt;
+    function multi(){
+        var a = document.getElementById('a').value;
+        var b = document.getElementById('b').value;
+        var result = document.getElementById('result');
+        result.innerHTML = a * b;
+    };
+&lt;/script&gt;
+&lt;div&gt;
+    &lt;p&gt;Simple multiplication machine, test the &amp;lt;output&amp;gt; label&lt;/p&gt;
+    &lt;form action="#" id="calculator"&gt;
+        &lt;label&gt;a:&lt;/label&gt;
+        &lt;input id="a" /&gt;&lt;br /&gt;
+        &lt;label&gt;b:&lt;/label&gt;
+        &lt;input id="b" /&gt;&lt;br /&gt;
+        &lt;button onclick="multi()"&gt;Calculate&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;p&gt;The result: &lt;output id="result"&gt;&lt;/output&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p></body>
+</html>
+```</p>
+
+<h3>使用<code>mark</code>标注突显文本</h3>
+
+<p><code>mark</code>元素标注文本后，浏览器默认给文本添加黄色背景，可以使用样式表修改颜色。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5语义元素1]]></title>

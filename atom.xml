@@ -4,7 +4,7 @@
   <title><![CDATA[Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-10T00:35:18+08:00</updated>
+  <updated>2013-06-12T16:53:40+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -12,6 +12,108 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5语义元素2]]></title>
+    <link href="http://Oisris.github.io/blog/2013/06/10/html5-semantic-element-2/"/>
+    <updated>2013-06-10T17:08:00+08:00</updated>
+    <id>http://Oisris.github.io/blog/2013/06/10/html5-semantic-element-2</id>
+    <content type="html"><![CDATA[<p>之前记录了一些与页面结构有关的语义元素，<code>article</code>，<code>aside</code>，<code>figure</code>，<code>figcaption</code>，<code>footer</code>，<code>header</code>，<code>hgroup</code>，<code>nav</code>和<code>section</code>。除了这些之外还有一些其他的一些语义元素.</p>
+
+<h3>使用<code>time</code>元素标注时间和日期</h3>
+
+<p>计算机能看懂的日期格式为<code>YYYY-MM-DD</code>。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>Today is <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;2013-06-04&quot;</span><span class="nt">&gt;</span>2013.06.04<span class="nt">&lt;/time&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>标注日期的格式为<code>HH:MM+00:00</code>，前两位表示小时，接着两位表示分钟，然后是一个加号，后面的是时区。要表示北京时间晚上七点半的话：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>The party starts at <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;19:30+8:00&quot;</span><span class="nt">&gt;</span>7:30 pm.<span class="nt">&lt;/time&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>也可以吧上面两个合在一起，在日期和时间之间使用T连接。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>The party starts at <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;2013-06-04T19:30+8:00&quot;</span><span class="nt">&gt;</span>June 4<span class="nt">&lt;sup&gt;</span>th<span class="nt">&lt;/sup&gt;</span> at 7:30 pm.<span class="nt">&lt;/time&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!--more-->
+
+
+<h3>使用<code>output</code>标注JavaScript返回值</h3>
+
+<p>这个元素更多是用作占位符，用来放JavaScript的输出数据。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'><span class="nt">&lt;head&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;title&gt;</span>Simple Calculator<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'><span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script&gt;</span>
+</span><span class='line'>      <span class="kd">function</span> <span class="nx">multi</span><span class="p">(){</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">result</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">};</span>
+</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;p&gt;</span>Simple multiplication machine, test the <span class="ni">&amp;lt;</span>output<span class="ni">&amp;gt;</span> label<span class="nt">&lt;/p&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;calculator&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;label&gt;</span>a:<span class="nt">&lt;/label&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;a&quot;</span> <span class="nt">/&gt;&lt;br</span> <span class="nt">/&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;label&gt;</span>b:<span class="nt">&lt;/label&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;b&quot;</span> <span class="nt">/&gt;&lt;br</span> <span class="nt">/&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">&quot;multi()&quot;</span><span class="nt">&gt;</span>Calculate<span class="nt">&lt;/button&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/form&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;p&gt;</span>The result: <span class="nt">&lt;output</span> <span class="na">id=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;&lt;/output&gt;&lt;/p&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>使用<code>mark</code>标注突显文本</h3>
+
+<p><code>mark</code>元素标注文本后，浏览器默认给文本添加黄色背景，可以使用样式表修改颜色。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NEET第一周总结]]></title>
