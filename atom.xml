@@ -4,7 +4,7 @@
   <title><![CDATA[Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-12T16:53:40+08:00</updated>
+  <updated>2013-06-12T18:51:35+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -29,12 +29,20 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>显示为：</p>
+
+<p>Today is <time datetime="2013-06-04">2013.06.04</time></p>
+
 <p>标注日期的格式为<code>HH:MM+00:00</code>，前两位表示小时，接着两位表示分钟，然后是一个加号，后面的是时区。要表示北京时间晚上七点半的话：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='html'><span class='line'>The party starts at <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">&quot;19:30+8:00&quot;</span><span class="nt">&gt;</span>7:30 pm.<span class="nt">&lt;/time&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>显示为：</p>
+
+<p>The party starts at <time datetime="19:30+8:00">7:30 pm.</time></p>
 
 <p>也可以吧上面两个合在一起，在日期和时间之间使用T连接。</p>
 
@@ -43,7 +51,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>显示为：</p>
 
+<p>The party starts at <time datetime="2013-06-04T19:30+8:00">June 4<sup>th</sup> at 7:30 pm.</time></p>
 
 <!--more-->
 
@@ -107,6 +117,31 @@
 </span><span class='line'><span class="nt">&lt;/body&gt;</span>
 </span><span class='line'><span class="nt">&lt;/html&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+<p>显示为：</p>
+
+<script>
+    function multi(){
+        var a = document.getElementById('a').value;
+        var b = document.getElementById('b').value;
+        var result = document.getElementById('result');
+        result.innerHTML = a * b;
+    };
+</script>
+
+
+<div>
+    <p>Simple multiplication machine, test the &lt;output&gt; label</p>
+    <form action="#" id="calculator">
+        <label>a:</label>
+        <input id="a" /><br />
+        <label>b:</label>
+        <input id="b" /><br />
+        <button onclick="multi()">Calculate</button>
+    </form>
+    <p>The result: <output id="result"></output></p>
+</div>
 
 
 <h3>使用<code>mark</code>标注突显文本</h3>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HTML5 | Oisris@五月病持续中...]]></title>
   <link href="http://Oisris.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://Oisris.github.io/"/>
-  <updated>2013-06-12T16:53:40+08:00</updated>
+  <updated>2013-06-12T18:51:35+08:00</updated>
   <id>http://Oisris.github.io/</id>
   <author>
     <name><![CDATA[Oisris]]></name>
@@ -28,17 +28,29 @@
 Today is &lt;time datetime="2013-06-04"&gt;2013.06.04&lt;/time&gt;
 </code></p>
 
+<p>显示为：</p>
+
+<p>Today is <time datetime="2013-06-04">2013.06.04</time></p>
+
 <p>标注日期的格式为<code>HH:MM+00:00</code>，前两位表示小时，接着两位表示分钟，然后是一个加号，后面的是时区。要表示北京时间晚上七点半的话：</p>
 
 <p><code>html
 The party starts at &lt;time datetime="19:30+8:00"&gt;7:30 pm.&lt;/time&gt;
 </code></p>
 
+<p>显示为：</p>
+
+<p>The party starts at <time datetime="19:30+8:00">7:30 pm.</time></p>
+
 <p>也可以吧上面两个合在一起，在日期和时间之间使用T连接。</p>
 
 <p><code>html
 The party starts at &lt;time datetime="2013-06-04T19:30+8:00"&gt;June 4&lt;sup&gt;th&lt;/sup&gt; at 7:30 pm.&lt;/time&gt;
 </code></p>
+
+<p>显示为：</p>
+
+<p>The party starts at <time datetime="2013-06-04T19:30+8:00">June 4<sup>th</sup> at 7:30 pm.</time></p>
 
 <!--more-->
 
@@ -82,6 +94,31 @@ The party starts at &lt;time datetime="2013-06-04T19:30+8:00"&gt;June 4&lt;sup&g
 <p></body>
 </html>
 ```</p>
+
+<p>显示为：</p>
+
+<script>
+    function multi(){
+        var a = document.getElementById('a').value;
+        var b = document.getElementById('b').value;
+        var result = document.getElementById('result');
+        result.innerHTML = a * b;
+    };
+</script>
+
+
+<div>
+    <p>Simple multiplication machine, test the &lt;output&gt; label</p>
+    <form action="#" id="calculator">
+        <label>a:</label>
+        <input id="a" /><br />
+        <label>b:</label>
+        <input id="b" /><br />
+        <button onclick="multi()">Calculate</button>
+    </form>
+    <p>The result: <output id="result"></output></p>
+</div>
+
 
 <h3>使用<code>mark</code>标注突显文本</h3>
 
